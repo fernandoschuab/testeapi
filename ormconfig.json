@@ -1,11 +1,11 @@
 {
    "type": "mysql",
-   "host": "localhost",
-   "port": 3306,
-   "username": "fernando",
+   "host": "mysql669.umbler.com",
+   "port": 41890,
+   "username": "root3",
 
- "password": "i%7p4L?H}m<$5FV54YB{c5v+7!)bHNR",
-   "database": "appnafeira",
+ "password": "i7p4LH}m5FV54YB{c5v+7)bHNR",
+   "database": "feiranoapp",
    "synchronize": true,
    "logging": false,
 
