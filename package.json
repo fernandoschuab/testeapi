@@ -24,11 +24,11 @@
       "mysql": "^2.14.1",
       "nodejs": "0.0.0",
       "reflect-metadata": "^0.1.13",
-      "typeorm": "^0.2.20"
+      "typeorm": "^0.2.25"
    },
    "devDependencies": {
       "@types/node": "^8.10.59",
-      "ts-node": "^8.7.0",
+      "ts-node": "^8.10.2",
       "typescript": "3.3.3333"
    }
 }
