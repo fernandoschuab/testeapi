@@ -78,6 +78,7 @@ export class itensController extends BaseController<itens> {
         _item.tipoProduto = <tipoproduto>tipoProduto;
         _item.descricaoItem = descricaoItem;
         _item.foto = foto;
+        _item.preco = preco;
 
         if(_item.foto){
           let pictureCreatedResult = await FileHelper.writePicture(_item.foto)
