@@ -41,13 +41,14 @@ export class itensController extends BaseController<itens> {
       }
 
     async save(request: Request) {
-        let{uid,nomeItem, codCategoria,codQuant, tipoProduto,foto, descricaoItem} = request.body;
+        let{uid,nomeItem, codCategoria,codQuant, tipoProduto,foto, descricaoItem, preco} = request.body;
         let _item = new itens();
         _item.uid = uid;
 
         const validar = await getRepository(itens).findOne({uid: uid ,nomeItem: nomeItem });
         const validar3 = await getRepository(itens).findOne({nomeItem: nomeItem, deleted:true});
         const validar2 = await getRepository(itens).findOne({ nomeItem: nomeItem });
+        
 
         if(validar){
             //se já estiver cadastrado (tiver uid), passa
@@ -60,6 +61,10 @@ export class itensController extends BaseController<itens> {
                 super.isRequired(nomeItem,'Inválido: Item já está cadastrado.');
         }else{
             super.isRequired(nomeItem,"Selecione o nome do Item");
+            if(preco<=0){
+              preco = null;
+              super.isRequired(preco,"Informe um preço válido");
+            }
         } 
 
         super.isRequired(codCategoria,'Selecione a categoria');

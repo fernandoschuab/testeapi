@@ -21,6 +21,9 @@ export class itens extends BaseEntity {
     @Column({nullable: true})
     codQuant: codquant;
 
+   @Column({nullable: false, default: 0.00 })
+    preco: number;
+
     @Column({ type: 'varchar', length: 2000, nullable: true  })
     descricaoItem: string;
     @Column({ type: 'varchar', length: 2000, nullable: true  })
