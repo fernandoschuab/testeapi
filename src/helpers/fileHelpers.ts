@@ -22,7 +22,7 @@ export class FileHelper {
             if (!dirExistis)
                 await fs.mkdirSync(_directory)
 
-            let filename = `${UtilsHelper.GenerateUniqueHash}.jpg`
+            let filename = `${UtilsHelper.GenerateUniqueHash}.png`
             let fileNamePath = `${_directory}/${filename}`
 
             await fs.writeFileSync(fileNamePath, _base64Data, 'base64')

@@ -9,4 +9,5 @@ export default {
     'funcionarios/auth',
     '/storage'
   ]
+  
 }
