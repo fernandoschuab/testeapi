@@ -19,7 +19,9 @@ export const Routes = [
     { method: "post", route: "/cadastrousuarios/:id", controller: CadastroController, action: "save" },
     { method: "post", route: "/cadastrousuarios/create", controller: CadastroController, action: "save" },
 
-    { method: "delete", route: "/cadastrousuarios", controller: CadastroController, action: "remove" },
+    { method: "delete", route: "/cadastrousuarios/:id", controller: CadastroController, action: "remove" },
+    
+
     
 
     { method: "get", route: "/itens", controller: itensController, action: "all" },
