@@ -97,10 +97,10 @@ export class itensController extends BaseController<itens> {
     _item.uid = uid;
     _item.qtdeEmEstoque = qtdeEmEstoque;
 
-  if(qtdeEmEstoque ==0){
+  if(qtdeEmEstoque <0){
     qtdeEmEstoque = null
   }
-  super.isRequired(qtdeEmEstoque,'Quantidade estoque não pode ser zerada');
+  super.isRequired(qtdeEmEstoque,'Quantidade estoque não pode ser negativa');
       
 
       
