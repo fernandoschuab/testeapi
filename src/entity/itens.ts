@@ -24,6 +24,9 @@ export class itens extends BaseEntity {
     @Column({nullable: false, type: "float", precision: 2, default: 0.01 })
     preco: number;
 
+    @Column({nullable: false, type: "int4", default: 0})
+    qtdeEmEstoque;
+
     @Column({ type: 'varchar', length: 2000, nullable: true  })
     descricaoItem: string;
     @Column({ type: 'varchar', length: 2000, nullable: true  })
