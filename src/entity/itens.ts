@@ -25,7 +25,7 @@ export class itens extends BaseEntity {
     preco: number;
 
     @Column({nullable: false, type: "int", default: 0})
-    qtdeEmEstoque;
+  qtdeEmEstoque: number;;
 
     @Column({ type: 'varchar', length: 2000, nullable: true  })
     descricaoItem: string;
