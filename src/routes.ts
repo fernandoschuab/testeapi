@@ -22,8 +22,6 @@ export const Routes = [
     { method: "delete", route: "/cadastrousuarios/:id", controller: CadastroController, action: "remove" },
     
 
-    
-
     { method: "get", route: "/itens", controller: itensController, action: "all" },
     { method: "get", route: "/itens/:id", controller: itensController, action: "one" },
     { method: "get", route: "/porcategoria/:id", controller: itensController, action: "porCategoria" },
@@ -31,6 +29,8 @@ export const Routes = [
     { method: "get", route: "/nokits", controller: itensController, action: "nokits" },
     { method: "post", route: "/itens/:id", controller: itensController, action: "save" },
     { method: "post", route: "/itens", controller: itensController, action: "save" },
+    { method: "post", route: "/estoque", controller: itensController, action: "estoque" },
+    { method: "post", route: "/estoque/:id", controller: itensController, action: "estoque" },
     { method: "delete", route: "/itens/:id", controller: itensController, action: "remove" },
 
     { method: "get", route: "/kititens", controller: ItensKitController, action: "all" },

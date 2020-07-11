@@ -87,4 +87,23 @@ export class itensController extends BaseController<itens> {
         }
         return(super.save(_item,request));
     };
+
+
+
+
+  async estoque(request: Request) {
+    let{uid,qtdeEmEstoque} = request.body;
+    let _item = new itens();
+    _item.uid = uid;
+    _item.qtdeEmEstoque = qtdeEmEstoque;
+
+  if(qtdeEmEstoque ==0){
+    qtdeEmEstoque = null
+  }
+  super.isRequired(qtdeEmEstoque,'Quantidade estoque não pode ser zerada');
+      
+
+      
+  return(super.save(_item,request));
+  };
 }
