@@ -55,6 +55,7 @@ export const Routes = [
 
     
     { method: "get", route: "/endereco/:id", controller: CadastroController, action: "todosMeus" },
+    { method: "get", route: "/endereco", controller: CadastroController, action: "todosMeus" },
     { method: "post", route: "/endereco", controller: CadastroController, action: "AdicionarEndereco" },
     { method: "post", route: "/endereco/:id", controller: CadastroController, action: "save" },
     { method: "delete", route: "/endereco/:id", controller: CadastroController, action: "remove" },
