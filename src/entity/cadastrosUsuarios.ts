@@ -17,5 +17,8 @@ export class cadastrosUsuarios extends BasePessoa {
 
     @Column({ type: 'varchar', length: 100 })
     senha: string;
+
+
+
 }
 
