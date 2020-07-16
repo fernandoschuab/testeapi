@@ -33,6 +33,7 @@ export class CadastroController extends BaseController<enderecoCadastro> {
     }
 
     async todosMeus(request: Request) {
+      try{
         if (this.checkNotPermission(request)) return this.errorRoot;
         return this._repository2.find({
           where: {
@@ -40,6 +41,10 @@ export class CadastroController extends BaseController<enderecoCadastro> {
             codCadastro: request.params.id,
           }
         });
+
+      }catch{
+        return { status: 404, errors: ['Nenhum endereço cadastrado'] }
       }
+    }        
 
 }
