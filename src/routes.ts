@@ -8,6 +8,7 @@ import { PedidoController } from "./controller/PedidoController";
 import { PedidoItensController } from "./controller/PedidoItensController";
 import { StorageController } from "./controller/StorageController";
 import { FuncionariosController } from "./controller/FuncionariosController";
+import { EnderecoController } from "./controller/EnderecoControler";
 
 export const Routes = [
     { method: "get", route: "/storage/:filename", controller: StorageController, action: "getFile" },
@@ -54,12 +55,12 @@ export const Routes = [
 
 
     
-    { method: "get", route: "/endereco/:id", controller: CadastroController, action: "todosMeus" },
-    { method: "get", route: "/endereco", controller: CadastroController, action: "todosMeus" },
-    { method: "post", route: "/endereco", controller: CadastroController, action: "AdicionarEndereco" },
-    { method: "post", route: "/endereco/:id", controller: CadastroController, action: "save" },
-    { method: "post", route: "/endereco", controller: CadastroController, action: "save" },
-    { method: "delete", route: "/endereco/:id", controller: CadastroController, action: "remove" },
+    { method: "get", route: "/endereco/:id", controller: EnderecoController, action: "todosMeus" },
+    { method: "get", route: "/endereco", controller: EnderecoController, action: "todosMeus" },
+    { method: "post", route: "/endereco", controller: EnderecoController, action: "AdicionarEndereco" },
+    { method: "post", route: "/endereco/:id", controller: EnderecoController, action: "save" },
+    { method: "post", route: "/endereco", controller: EnderecoController, action: "save" },
+    { method: "delete", route: "/endereco/:id", controller: EnderecoController, action: "remove" },
 
     { method: "get", route: "/pedido", controller: PedidoController, action: "all" },
     { method: "get", route: "/pedido/:pedidoStatus/all", controller: PedidoController, action: "status" },

@@ -5,7 +5,7 @@ import { cadastrosUsuarios } from "../entity/cadastrosUsuarios";
 import { Repository, getRepository } from "typeorm";
 
 
-export class CadastroController extends BaseController<enderecoCadastro> {
+export class EnderecoController extends BaseController<enderecoCadastro> {
     private _repository2: Repository<enderecoCadastro>;
     //private _repository: Repository<enderecoCadastro>;
     
