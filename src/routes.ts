@@ -53,6 +53,12 @@ export const Routes = [
     { method: "delete", route: "/categoria/:id", controller: CategoriaController, action: "remove" },
 
 
+    
+    { method: "get", route: "/endereco/:id", controller: CadastroController, action: "todosMeus" },
+    { method: "post", route: "/endereco", controller: CadastroController, action: "AdicionarEndereco" },
+    { method: "post", route: "/endereco/:id", controller: CadastroController, action: "save" },
+    { method: "delete", route: "/endereco/:id", controller: CadastroController, action: "remove" },
+
     { method: "get", route: "/pedido", controller: PedidoController, action: "all" },
     { method: "get", route: "/pedido/:pedidoStatus/all", controller: PedidoController, action: "status" },
     //{ method: "get", route: "/pedido/:id", controller: PedidoController, action: "one" },
