@@ -29,7 +29,13 @@ export class CEPController extends BaseController<cep> {
     
         return(super.save(_cep,request));
     }
-
+    async todos(request: Request) {
+        return this._repository2.find({
+          where: {
+            deleted: false
+          }
+        });
+      }
             
 
 }

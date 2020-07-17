@@ -63,7 +63,7 @@ export const Routes = [
     { method: "delete", route: "/endereco/:id", controller: EnderecoController, action: "remove" },
 
 
-    { method: "get", route: "/cep", controller: CEPController, action: "all" },
+    { method: "get", route: "/cep", controller: CEPController, action: "todos" },
     { method: "get", route: "/cep/:id", controller: CEPController, action: "one" },
     { method: "post", route: "/cep", controller: CEPController, action: "save" },
     { method: "post", route: "/cep:id", controller: CEPController, action: "save" },
