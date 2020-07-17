@@ -5,12 +5,11 @@ import { CEP } from "../entity/cep";
 
 
 export class CEPController extends BaseController<CEP> {
-    private _repository2: Repository<CEP>;
-    //private _repository: Repository<enderecoCadastro>;
+
     
     constructor(){
         super(CEP);  
-        this._repository2 = getRepository<CEP>(CEP);       
+      
     };
     async AdicionarCEP(request: Request){
         let{ cep, cidade, bairro, uf } = request.body;
