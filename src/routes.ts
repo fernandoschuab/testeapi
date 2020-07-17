@@ -91,12 +91,5 @@ export const Routes = [
     { method: "delete", route: "/funcionarios/:id", controller: FuncionariosController, action: "remove" }
     
     
-/*
-    { method: "get", route: "/questions", controller: QuestionController, action: "all" },
-    { method: "get", route: "/questions/:id", controller: QuestionController, action: "one" },
-    { method: "post", route: "/questions", controller: QuestionController, action: "save" },
-    { method: "delete", route: "/questions/:id", controller: QuestionController, action: "remove" }
-
-*/
 ];
 
