@@ -10,7 +10,8 @@ export class CEPController extends BaseController<cep> {
     
     constructor(){
         super(cep);  
-        this._repository2 = getRepository<cep>(cep);       
+        this._repository2 = getRepository<cep>(cep);  
+        console.log(this._repository2);     
     };
     async AdicionarCEP(request: Request){
         let{ cep, cidade, bairro, uf } = request.body;
@@ -30,6 +31,8 @@ export class CEPController extends BaseController<cep> {
         return(super.save(_cep,request));
     }
     async todos(request: Request) {
+        this._repository2 = getRepository<cep>(cep);  
+        console.log(this._repository2);     
         return this._repository2.find({
           where: {
             entregaNesteCep: true
