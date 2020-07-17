@@ -32,7 +32,7 @@ export class CEPController extends BaseController<cep> {
     async todos(request: Request) {
         return this._repository2.find({
           where: {
-            deleted: false
+            entregaNesteCep: true
           }
         });
       }
