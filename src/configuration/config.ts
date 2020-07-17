@@ -7,7 +7,8 @@ export default {
     'cadastrousuarios/create',
     'cadastrousuarios/auth',
     'funcionarios/auth',
-    '/storage'
+    '/storage',
+    'cep'
   ]
   
 }
