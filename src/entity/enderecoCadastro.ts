@@ -1,5 +1,5 @@
 import { PrimaryColumn, Column, ManyToOne, JoinColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { CEP } from "./cep";
+import { cep } from "./cep";
 import { cadastrosUsuarios } from "./cadastrosUsuarios";
 import { BaseEntity } from "./BaseEntity";
 
@@ -22,9 +22,9 @@ export class enderecoCadastro extends BaseEntity {
     @Column({ type: 'varchar', length: 100 })
     bairroEndereco: string;
 
-     @ManyToOne(type => CEP, CEP => CEP.cep, {nullable:false})
+     @ManyToOne(type => cep, cep => cep.cep, {nullable:false})
     @JoinColumn({name: 'cep'})
-    cep: CEP;
+    cep: cep;
     
     @Column({ default: false })
     naoEntregaNesteLocal: boolean;
