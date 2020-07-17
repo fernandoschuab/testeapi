@@ -9,7 +9,7 @@ import { PedidoItensController } from "./controller/PedidoItensController";
 import { StorageController } from "./controller/StorageController";
 import { FuncionariosController } from "./controller/FuncionariosController";
 import { EnderecoController } from "./controller/EnderecoControler";
-
+import {CEPController} from "./controller/CEPController";
 export const Routes = [
     { method: "get", route: "/storage/:filename", controller: StorageController, action: "getFile" },
     
@@ -61,6 +61,15 @@ export const Routes = [
     { method: "post", route: "/endereco/:id", controller: EnderecoController, action: "save" },
     { method: "post", route: "/endereco", controller: EnderecoController, action: "save" },
     { method: "delete", route: "/endereco/:id", controller: EnderecoController, action: "remove" },
+
+
+    { method: "get", route: "/cep", controller: CEPController, action: "all" },
+    { method: "get", route: "/cep/:id", controller: CEPController, action: "one" },
+    { method: "post", route: "/cep", controller: CEPController, action: "save" },
+    { method: "post", route: "/cep:id", controller: CEPController, action: "save" },
+    { method: "delete", route: "/cep/:id", controller: CEPController, action: "remove" },
+
+
 
     { method: "get", route: "/pedido", controller: PedidoController, action: "all" },
     { method: "get", route: "/pedido/:pedidoStatus/all", controller: PedidoController, action: "status" },
