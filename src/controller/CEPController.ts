@@ -8,6 +8,7 @@ export class CEPController extends BaseController<cep> {
     private _repository2: Repository<cep>;
     
     
+    
     constructor(){
         super(cep);  
         this._repository2 = getRepository<cep>(cep);  
@@ -29,16 +30,20 @@ export class CEPController extends BaseController<cep> {
         _cep.uf = uf;
     
         return(super.save(_cep,request));
-    }
-    async todos() {
-        this._repository2 = await getRepository<cep>(cep);  
-        console.log(this._repository2);     
-        return this._repository2.find({
-          where: {
-            entregaNesteCep: true
-          }
-        });
-      }
-            
+    }   
+
+
+      async todos() {
+        try{
+          return this._repository2.find({
+            where: {
+              entregaNesteCep: true
+            }
+          });
+  
+        }catch{
+          return { status: 404, errors: ['Nenhum cep cadastrado'] }
+        }
+      }        
 
 }
