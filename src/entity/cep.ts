@@ -1,6 +1,6 @@
 import { PrimaryColumn, BaseEntity, Column, Entity, OneToMany } from "typeorm";
 @Entity({ name: 'cep' })
-export class CEP{
+export class cep{
  
     @PrimaryColumn()
     cep: string;

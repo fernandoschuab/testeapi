@@ -1,16 +1,16 @@
 import {NextFunction, Request, Response} from "express";
 import { BaseController } from "./BaseController";
 import { Repository, getRepository } from "typeorm";
-import { CEP } from "../entity/cep";
+import { cep } from "../entity/cep";
 
 
-export class CEPController extends BaseController<CEP> {
-    private _repository2: Repository<CEP>;
+export class CEPController extends BaseController<cep> {
+    private _repository2: Repository<cep>;
     
     
     constructor(){
-        super(CEP);  
-        this._repository2 = getRepository<CEP>(CEP);       
+        super(cep);  
+        this._repository2 = getRepository<cep>(cep);       
     };
     async AdicionarCEP(request: Request){
         let{ cep, cidade, bairro, uf } = request.body;
@@ -21,7 +21,7 @@ export class CEPController extends BaseController<CEP> {
         super.isRequired(uf,'Informe o estado (abreviado, 2 letras)');
 
 
-        let _cep = new CEP();
+        let _cep = new cep();
         _cep.cep = cep;
         _cep.cidade = cidade
         _cep.bairro = bairro;
