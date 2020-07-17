@@ -37,7 +37,7 @@ export class CEPController extends BaseController<cep> {
         try{
           return this._repository2.find({
             where: {
-              entregaNesteCep: true
+              entregaNesteCep: 1
             }
           });
   
