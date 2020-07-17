@@ -8,9 +8,9 @@ export class CEPController extends BaseController<CEP> {
 
     
     constructor(){
-        super(CEP);  
-      
+        super(CEP);    
     };
+
     async AdicionarCEP(request: Request){
         let{ cep, cidade, bairro, uf } = request.body;
         
@@ -27,7 +27,7 @@ export class CEPController extends BaseController<CEP> {
         _cep.uf = uf;
     
         return(super.save(_cep,request));
-    }
+    };
 
             
 
