@@ -30,8 +30,8 @@ export class CEPController extends BaseController<cep> {
     
         return(super.save(_cep,request));
     }
-    async todos(request: Request) {
-        this._repository2 = getRepository<cep>(cep);  
+    async todos() {
+        this._repository2 = await getRepository<cep>(cep);  
         console.log(this._repository2);     
         return this._repository2.find({
           where: {
