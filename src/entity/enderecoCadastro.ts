@@ -22,7 +22,7 @@ export class enderecoCadastro extends BaseEntity {
     @Column({ type: 'varchar', length: 100 })
     bairroEndereco: string;
 
-     @ManyToOne(type => cep, cep => cep.cep, {nullable:false})
+     @ManyToOne(type => cep, cep => cep.cep, {nullable:false, eager: true})
     @JoinColumn({name: 'cep'})
     cep: cep;
     
