@@ -45,7 +45,7 @@ export class PedidoController extends BaseController<pedidos> {
         }
         
       }
-    async save(request: Request) {
+    async salvar(request: Request) {
         let _request = <pedidos>request.body;
         _request.descontoAplicado = 0; //por enquanto não implementamos cupons de desconto
     
