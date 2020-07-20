@@ -80,6 +80,7 @@ export const Routes = [
     //{ method: "get", route: "/pedido/:pedidoStatus", controller: PedidoController, action: "status" },
     
     { method: "post", route: "/pedido", controller: PedidoController, action: "save" },
+    { method: "post", route: "/pedido/:id", controller: PedidoController, action: "save" },
     { method: "delete", route: "/pedido/:id", controller: PedidoController, action: "remove" },
 
     { method: "get", route: "/pedidoitens/:pedidoUid/all", controller: PedidoItensController, action: "all" },
