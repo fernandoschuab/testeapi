@@ -46,16 +46,17 @@ export class PedidoController extends BaseController<pedidos> {
         
       }
     async salvar(request: Request) {
+      console.log('request',request);
         let _request = <pedidos>request.body;
         _request.descontoAplicado = 0; //por enquanto não implementamos cupons de desconto
     
-        super.isRequired(_request.codCadastro, 'Preciso saber quem é você. Faça login');
-        super.isRequired(_request.formaPagamento, 'Informe a forma pagamento');
-        super.isRequired(_request.precoTotalPedido, 'Erro com preço total');
+        // super.isRequired(_request.codCadastro, 'Preciso saber quem é você. Faça login');
+        // super.isRequired(_request.formaPagamento, 'Informe a forma pagamento');
+        // super.isRequired(_request.precoTotalPedido, 'Erro com preço total');
         if(_request.precoTotalPedido <= 0)
             return {status: 404, message: 'Pedido Inválido'};
 
-        if (!_request.uid)
+        if (!_request.statusPedido)
           _request.statusPedido = 1;
         return super.save(_request, request);
       }
