@@ -60,7 +60,7 @@ export class PedidoController extends BaseController<pedidos> {
         return super.save(_request, request);
       }
       async meus(request: Request) {
-        let { codCadastro } = request.params
+        let { codCadastro } = request.params.id
         
         if (!codCadastro)
           return { status: 400, message: 'Faça login para listar pedidos' }
