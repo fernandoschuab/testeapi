@@ -14,7 +14,7 @@ export class pedidos extends BaseEntity {
     @Column({default:1})
     statusPedido: statuspedido ;
 
-    @Column()
+    @Column({nullable: false, type: "float", precision: 2, default: 0.01 })
     precoTotalPedido: number;
 
     @Column({nullable: true} )
