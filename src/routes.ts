@@ -42,7 +42,7 @@ export const Routes = [
     { method: "delete", route: "/kititens/:id", controller: ItensKitController, action: "remove" },
 
     { method: "get", route: "/kit", controller: KitController, action: "all" },
-    { method: "get", route: "/kit/:id", controller: KitController, action: "itenskits" },
+    { method: "get", route: "/kit/:id", controller: KitController, action: "one" },
     { method: "post", route: "/kit", controller: KitController, action: "save" },
     { method: "post", route: "/kit/:id", controller: KitController, action: "save" }, 
     { method: "delete", route: "/kit/:id", controller: KitController, action: "remove" },
