@@ -4,11 +4,8 @@ import { cadastrosUsuarios } from "./cadastrosUsuarios";
 import { BaseEntity } from "./BaseEntity";
 
 @Entity({ name: 'enderecocadastro' })
-@Unique(["codPedido"])
-export class enderecoCadastro extends BaseEntity {
 
-    @Column({nullable:false,  type: 'varchar', length: 300 })
-    codPedido: string;
+export class enderecoCadastro extends BaseEntity {
     
     @ManyToOne(type => cadastrosUsuarios)
     @JoinColumn({ referencedColumnName: "uid", name: 'codCadastro'/*a ser exibido na tab*/})
