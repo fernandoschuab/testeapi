@@ -1,10 +1,14 @@
-import { PrimaryColumn, Column, ManyToOne, JoinColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { PrimaryColumn, Column, ManyToOne, JoinColumn, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
 import { cep } from "./cep";
 import { cadastrosUsuarios } from "./cadastrosUsuarios";
 import { BaseEntity } from "./BaseEntity";
 
 @Entity({ name: 'enderecocadastro' })
+@Unique(["codPedido"])
 export class enderecoCadastro extends BaseEntity {
+
+    @Column({nullable:false,  type: 'varchar', length: 300 })
+    codPedido: string;
     
     @ManyToOne(type => cadastrosUsuarios)
     @JoinColumn({ referencedColumnName: "uid", name: 'codCadastro'/*a ser exibido na tab*/})
