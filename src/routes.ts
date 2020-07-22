@@ -14,7 +14,7 @@ export const Routes = [
     { method: "get", route: "/storage/:filename", controller: StorageController, action: "getFile" },
     
     { method: "get", route: "/cadastrousuarios", controller: CadastroController, action: "all" },
-    { method: "get", route: "/cadastrousuarios/:id", controller: CadastroController, action: "one" },
+    { method: "get", route: "/cadastrousuarios/:id", controller: CadastroController, action: "one2" },
     { method: "post", route: "/cadastrousuarios", controller: CadastroController, action: "save" },
     { method: "post", route: "/cadastrousuarios/auth", controller: CadastroController, action: "auth" },
     { method: "post", route: "/cadastrousuarios/:id", controller: CadastroController, action: "save" },
