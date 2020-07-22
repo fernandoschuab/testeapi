@@ -10,7 +10,6 @@ import { FileHelper } from "../helpers/fileHelpers";
 
 
 export class CadastroController extends BaseController<cadastrosUsuarios> {
-    private _repository2: Repository<cadastrosUsuarios>;
     constructor(){
         super(cadastrosUsuarios);
         
@@ -146,13 +145,6 @@ export class CadastroController extends BaseController<cadastrosUsuarios> {
                 return true
           }
         
-          async one2(request: Request) {
-            if (this.checkNotPermission(request)) return this.errorRoot;
-
-            let rep = this._repository2.findOne(request.params.id);
-            (await rep).senha = "";
-            return rep;
-          }
     }
 
 
