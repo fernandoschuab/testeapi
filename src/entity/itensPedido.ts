@@ -9,7 +9,7 @@ import {BaseEntity} from "./BaseEntity"
 @Unique(["codItem", "codPedido"])
 export class itenspedidos extends BaseEntity {
     @ManyToOne(type => pedidos, { eager: true })
-    @JoinColumn({ referencedColumnName: "uid", name: 'codPedido'/*nome a ser exibido no bd*/})
+    @JoinColumn({ referencedColumnName: "codPedido", name: 'codPedido'/*nome a ser exibido no bd*/})
     codPedido: string;
 
     @ManyToOne(type => itens, { eager: true })
