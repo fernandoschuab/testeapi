@@ -87,11 +87,9 @@ export const Routes = [
 
     { method: "delete", route: "/pedido/:id", controller: PedidoController, action: "remove" },
 
-    { method: "get", route: "/pedidoitens/:pedidoUid/all", controller: PedidoItensController, action: "all" },
-    { method: "post", route: "/pedidoitens", controller: PedidoItensController, action: "save" },
-    { method: "post", route: "/pedidoitens/:id", controller: PedidoItensController, action: "save" },
-    { method: "put", route: "/pedidoitens", controller: PedidoItensController, action: "save" },
-   //{ method: "put", route: "/pedidoitens/:id", controller: PedidoItensController, action: "save" },
+   // { method: "get", route: "/pedidoitens/:pedidoUid/all", controller: PedidoItensController, action: "all" },
+    { method: "post", route: "/pedidoitens", controller: PedidoItensController, action: "save2" },
+    { method: "post", route: "/pedidoitens/:id", controller: PedidoItensController, action: "save2" },
     { method: "delete", route: "/pedidoitens/:id", controller: PedidoItensController, action: "remove" },
     
     { method: "get", route: "/funcionarios", controller: FuncionariosController, action: "all" },
