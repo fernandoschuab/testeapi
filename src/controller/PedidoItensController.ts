@@ -21,15 +21,15 @@ export class PedidoItensController extends BaseController<itenspedidos> {
           uid: pedidoUid
         })
       }
-      // async save(request: Request) {
-      //   let _request = <itenspedidos>request.body;
-        
-      //   // super.isRequired(_request.codPedido, 'Informe o Pedido');
-      //   // super.isRequired(_request.codItem, 'Informe o item');
-      //   // super.isRequired(_request.quantidadeProduto, 'Informe a quantidade do item');
-      //   // super.isRequired(_request.precoTotalItem, 'Erro preço produto');
-      //   return super.save(_request, request);
-      // }
+      save2(request: Request) {
+        let _request = <itenspedidos>request.body;
+        console.log('passei até aqui')
+        super.isRequired(_request.codPedido, 'Informe o Pedido');
+        super.isRequired(_request.codItem, 'Informe o item');
+        super.isRequired(_request.quantidadeProduto, 'Informe a quantidade do item');
+        super.isRequired(_request.precoTotalItem, 'Erro preço produto');
+        return super.save(_request, request);
+      }
     
      
 
