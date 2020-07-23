@@ -26,7 +26,7 @@ export class PedidoItensController extends BaseController<itenspedidos> {
         let{ codPedido, codItem,quantidadeProduto, precoTotalItem} = request.body;
     
         let _itenspedidos = new itenspedidos();
-
+        _itenspedidos.codPedido = codPedido;
         console.log('passei até aqui')
         //_itenspedidos.uid = request.uid;
         super.isRequired(_itenspedidos.codPedido, 'Informe o Pedido');
