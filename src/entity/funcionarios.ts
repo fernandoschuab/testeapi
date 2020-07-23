@@ -27,7 +27,7 @@ export class funcionarios extends BaseEntity {
     @Column({ default: false })
     isRoot: boolean;
 
-    @Column({ type: 'varchar', length: 100 })
+    @Column({ type: 'varchar', length: 100 , select: false })
     senha: string;
 
 }
