@@ -22,11 +22,10 @@ export class PedidoItensController extends BaseController<itenspedidos> {
         })
       }
       save2(request: Request) {
-        // let{ codPedido,codItem,quantidadeProduto,precoTotalItem} = request.body;
-        // let _categoria = new itenspedidos();
-        // _categoria.uid = uid;  
+        
         let _request = <itenspedidos>request.body;
         console.log('passei até aqui')
+        _request.uid = request.uid;
         super.isRequired(_request.codPedido, 'Informe o Pedido');
         super.isRequired(_request.codItem, 'Informe o item');
         super.isRequired(_request.quantidadeProduto, 'Informe a quantidade do item');
