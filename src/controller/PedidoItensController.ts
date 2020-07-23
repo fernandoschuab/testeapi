@@ -29,7 +29,7 @@ export class PedidoItensController extends BaseController<itenspedidos> {
         _itenspedidos.codPedido = codPedido;
         console.log('passei até aqui')
         //_itenspedidos.uid = request.uid;
-        super.isRequired(_itenspedidos.codPedido, 'Informe o Pedido');
+        super.isRequired(_itenspedidos.codPedido, request.body);
         super.isRequired(_itenspedidos.codItem, 'Informe o item');
         super.isRequired(_itenspedidos.quantidadeProduto, 'Informe a quantidade do item');
         super.isRequired(_itenspedidos.precoTotalItem, 'Erro preço produto');
