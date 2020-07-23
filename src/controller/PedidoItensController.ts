@@ -5,11 +5,11 @@ import { getRepository, Repository } from "typeorm";
 import { pedidos } from "../entity/pedidos";
 import { itenspedidos } from "../entity/itensPedido";
 
-export class PedidoItensController extends BaseController<itensKit> {
-  private _repository2: Repository<pedidos>;
+export class PedidoItensController extends BaseController<itenspedidos> {
+  private _repository2: Repository<itenspedidos>;
     constructor(){
         super(pedidos,false); 
-        this._repository2 = getRepository<pedidos>(pedidos);   
+        this._repository2 = getRepository<itenspedidos>(itenspedidos);   
     };
     async all(request: Request) {
         let { pedidoUid } = request.params
