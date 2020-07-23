@@ -30,8 +30,6 @@ export class PedidoItensController extends BaseController<itenspedidos> {
         _itenspedidos.codItem = codItem;
         _itenspedidos.quantidadeProduto = quantidadeProduto;
         _itenspedidos.precoTotalItem = precoTotalItem;
-        console.log('passei até aqui')
-        _itenspedidos.uid = request.uid;
 
 
         super.isRequired(_itenspedidos.codPedido, request.body);
