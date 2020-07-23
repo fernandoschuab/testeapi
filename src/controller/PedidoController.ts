@@ -62,7 +62,10 @@ export class PedidoController extends BaseController<pedidos> {
       }
       async meus(request: Request) {
         return this._repository2.find({
-          codCadastro: request.params.id,
+          where: {
+            codCadastro: request.params.id
+          }
+          , order: {createAt: 'DESC'},
         })
       }
 
