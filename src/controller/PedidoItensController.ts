@@ -38,7 +38,12 @@ export class PedidoItensController extends BaseController<itenspedidos> {
         super.isRequired(_itenspedidos.precoTotalItem, 'Erro preço produto');
         super.save(_itenspedidos, request);
       }
-    
+      async salvar(request: Request) {
+       // console.log('request',request.body);
+          let _request = <itenspedidos>request.body;
+        
+          return super.save(_request, request);
+        }
      
 
 }

@@ -89,10 +89,8 @@ export const Routes = [
 
     { method: "get", route: "/pedidoitens", controller: PedidoItensController, action: "one" },
     { method: "get", route: "/pedidoitens/:id", controller: PedidoItensController, action: "one" },
-    { method: "post", route: "/pedidoitens", controller: PedidoItensController, action: "save2" },
-    { method: "post", route: "/pedidoitens/:id", controller: PedidoItensController, action: "save2" },
-    { method: "post", route: "/pedidoitens1", controller: PedidoItensController, action: "save" },
-    { method: "post", route: "/pedidoitens1/:id", controller: PedidoItensController, action: "save" },
+    { method: "post", route: "/pedidoitens", controller: PedidoItensController, action: "salvar" },
+    { method: "post", route: "/pedidoitens/:id", controller: PedidoItensController, action: "salvar" },
     { method: "delete", route: "/pedidoitens/:id", controller: PedidoItensController, action: "remove" },
     
     { method: "get", route: "/funcionarios", controller: FuncionariosController, action: "all" },
